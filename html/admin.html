@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Panel de Administrador</h2>
+        <button id="logout">Cerrar Sesión</button>
+
+        <h3>Lista de Productos</h3>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>Añadir Producto</h3>
+        <form id="addProductForm">
+            <input type="text" id="productName" placeholder="Nombre" required>
+            <input type="text" id="productDescription" placeholder="Descripción" required>
+            <input type="number" id="productPrice" placeholder="Precio" required>
+            <select id="productCategory" required>
+                <option value="AMD">AMD</option>
+                <option value="NVIDIA">NVIDIA</option>
+            </select>
+            <input type="text" id="productImage" placeholder="URL de la Imagen" required>
+            <button type="submit">Añadir Producto</button>
+        </form>
+
+        <h3>Lista de Usuarios</h3>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="index.html">Página Principal</a></li>
+            <li><a href="findUs.html">Encuéntranos</a></li>
+            <li><a href="product.html">Productos</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+            <li><a href="cart.html">Carrito de Compras</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Carrito de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total-cantidad</th>
+                    <th>Restar/Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Aquí se agregarán los productos dinámicamente -->
+            </tbody>
+        </table>
+        <h3>Total a Pagar: $<span id="total"></span></h3>
+        <button id="pagarBtn">Pagar</button>
+    </div>
+    <script src="../js/cart.js"></script>
+</body>
+</html>
