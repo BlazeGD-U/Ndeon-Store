@@ -2,6 +2,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("loginForm");
     const registerForm = document.getElementById("registerForm");
 
+    // Función para validar la contraseña
+    function validarContraseña(password) {
+        const minLength = 8;
+        const tieneMayuscula = /[A-Z]/.test(password);
+        const tieneMinuscula = /[a-z]/.test(password);
+        const tieneNumero = /[0-9]/.test(password);
+        const tieneCaracterEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        if (password.length < minLength) {
+            return "La contraseña debe tener al menos 8 caracteres.";
+        }
+        if (!tieneMayuscula) {
+            return "La contraseña debe contener al menos una mayúscula.";
+        }
+        if (!tieneMinuscula) {
+            return "La contraseña debe contener al menos una minúscula.";
+        }
+        if (!tieneNumero) {
+            return "La contraseña debe contener al menos un número.";
+        }
+        if (!tieneCaracterEspecial) {
+            return "La contraseña debe contener al menos un carácter especial.";
+        }
+        return null; // Retorna null si la contraseña es válida
+    }
+
     if (loginForm) {
         loginForm.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -14,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem("loggedUser", JSON.stringify(user));
 
                 if (user.role === "admin") {
-                    window.location.href = "../html/admin.html"; // Redirige al panel de admin
+                    window.location.href = "../html/admin.html";
                 } else {
-                    window.location.href = "../html/index.html"; // Redirige a la tienda normal
+                    window.location.href = "../html/index.html";
                 }
             } else {
                 document.getElementById("loginError").textContent = "Usuario o contraseña incorrectos.";
@@ -37,17 +63,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            let role = "user"; // Por defecto, un usuario normal
+            // Validar la contraseña.
+            const errorContraseña = validarContraseña(password);
+            if (errorContraseña) {
+                document.getElementById("registerError").textContent = errorContraseña;
+                return;
+            }
+
+            let role = "user";
             if (username === "admin" && password === "admin") {
-                role = "admin"; // Si el usuario es "admin", darle rol de admin
+                role = "admin";
             }
 
             users.push({ fullname, username, password, role });
             localStorage.setItem("users", JSON.stringify(users));
-            window.location.href = "../html/login.html"; // Redirección al login después del registro exitoso
+            window.location.href = "../html/login.html";
         });
     }
 });
-
-
-

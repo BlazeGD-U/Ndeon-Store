@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
     function renderProducts() {
-        productTable.innerHTML = ""; // Limpiar la tabla antes de volver a llenarla
+        productTable.innerHTML = ""; // Limpiar la tabla antes de volver a llenarla.
     
         let products = JSON.parse(localStorage.getItem("products")) || [];
     
@@ -85,15 +85,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         let products = JSON.parse(localStorage.getItem("products")) || [];
+        
+        // Verificar si el nombre o la URL ya existen
+        const nombreExiste = products.some(product => product.nombre.toLowerCase() === nombre.toLowerCase());
+        const urlExiste = products.some(product => product.imagen === imagen);
+        
+        if (nombreExiste) {
+            alert("Ya existe un producto con ese nombre.");
+            return;
+        }
+        
+        if (urlExiste) {
+            alert("Ya existe un producto con esa URL de imagen.");
+            return;
+        }
+    
         products.push({ nombre, descripcion, precio, categoria, imagen });
-
+    
         localStorage.setItem("products", JSON.stringify(products));
     
         renderProducts();
         window.dispatchEvent(new Event("storage")); // Notificar cambios a otras páginas
-
+    
         alert("Producto agregado correctamente.");
-    }
+        
+        // Limpiar el formulario
+        document.getElementById("addProductForm").reset();
+    } 
 
     addProductForm.addEventListener("submit", (e) => {
         e.preventDefault();
