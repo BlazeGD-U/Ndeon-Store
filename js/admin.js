@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
-    if (!loggedUser || loggedUser.username !== "admin" || loggedUser.password !== "admin") {
+    if (!loggedUser || loggedUser.username !== "admin1" || loggedUser.password !== "Admin#123") {
         window.location.href = "../html/login.html";
     }
 
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderUsers() {
         userTable.innerHTML = "";
         users.forEach((user, index) => {
-            if (user.username !== "admin") {
+            if (user.username !== "admin1") {
                 const row = document.createElement("tr");
                 row.innerHTML = `
                     <td>${user.fullname}</td>

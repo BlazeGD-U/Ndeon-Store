@@ -1,0 +1,160 @@
+/* Importar tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../img/ndeonstore.jpg"); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: white; /* Para que el texto sea legible sobre el fondo */
+}
+
+/* 🔹 Menú de navegación superior */
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #0d0d0d, #222); /* Efecto futurista */
+    color: white;
+    padding: 10px 20px;
+    position: fixed; /* Fijar en la parte superior */
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo o título del menú */
+.navbar h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Lista de enlaces */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    background: #333;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: #00ff99;
+    color: black;
+}
+
+/* 🔹 Menú lateral */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #111;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #00ff99;
+    color: black;
+}
+
+/* 🔹 Contenedor del perfil */
+.container {
+    margin-left: 270px; /* Ajuste para que no se oculte el contenido bajo el menú lateral */
+    margin-top: 80px; /* Espacio ajustado para el menú fijo */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.8); /* Sombra para resaltar la sección */
+}
+
+h2 {
+    color: #007bff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* 🔹 Estilo de los inputs y botones */
+input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+button {
+    width: auto;
+    min-width: 120px;
+    padding: 8px 15px;
+    background: #00ff99;
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+}

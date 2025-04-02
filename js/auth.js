@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             let role = "user";
-            if (username === "admin" && password === "admin") {
+            if (username === "admin1" && password === "Admin#123") {
                 role = "admin";
             }
 

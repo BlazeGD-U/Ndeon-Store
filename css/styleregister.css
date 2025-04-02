@@ -1,0 +1,108 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../img/ndeonstore.jpg"); /* Imagen de fondo similar al index */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto de fondo fijo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Contenedor del formulario */
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia para destacar el formulario */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra para dar profundidad */
+    width: 350px;
+    text-align: center;
+}
+
+/* Título del formulario */
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #00ff99; /* Verde neón para resaltar */
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo de los campos al hacer hover o focus */
+input[type="text"]:focus, input[type="password"]:focus {
+    background: #00ff99;
+    outline: none;
+}
+
+/* Estilo del botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00ff99;
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Enlace de registro */
+p a {
+    color: #00ff99;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: #007bff;
+}
+
+/* Estilo del mensaje de error */
+#error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="password"], button {
+        font-size: 14px;
+    }
+}
