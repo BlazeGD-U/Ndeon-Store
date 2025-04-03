@@ -1,110 +1,114 @@
-/* Importar tipografía moderna */
+/* Importar tipografía */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
-/* Estilos generales */
+/* 🔹 Estilos generales */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/ndeonstore.jpg"); /* Imagen de fondo */
+    background-image: url("../img/otra1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    color: white; /* Para que el texto sea legible sobre el fondo */
-}
-
-/* 🔹 Menú lateral */
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: #111;
-    padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.sidebar h2 {
     color: white;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
-.sidebar ul {
+/* 🔹 Menú de navegación */
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #0d0d0d, #222);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 60px;
+}
+
+/* Lista de enlaces del menú */
+.navbar ul {
     list-style: none;
+    display: flex;
     padding: 0;
     margin: 0;
 }
 
-.sidebar ul li {
-    padding: 10px;
-    text-align: center;
+.navbar ul li {
+    margin: 0 15px;
 }
 
-.sidebar ul li a {
+.navbar ul li a {
     text-decoration: none;
     color: white;
-    display: block;
-    padding: 10px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    transition: background 0.3s;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
 }
 
-.sidebar ul li a:hover {
-    background: #00ff99;
-    color: black;
-}
 
 /* 🔹 Contenedor principal */
 .container {
-    margin-left: 270px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    margin-top: 120px; /* Aumentado para mayor separación */
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.8);
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.8);
     max-width: 800px;
-    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* 🔹 Títulos */
 h2 {
-    color: #007bff;
+    color: #00ff99;
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 700;
+    text-shadow: 0 0 10px #00ff99;
 }
 
-/* 🔹 Tabla del carrito */
+/* 🔹 Tabla */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
 table, th, td {
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
+    color: white;
 }
 
 th {
-    background: #222;
+    background: rgba(0, 255, 153, 0.2);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* 🔹 Botón de pago */
+/* 🔹 Botón */
 button {
-    width: auto;
-    min-width: 120px;
+    min-width: 140px;
     padding: 10px 15px;
     background: #00ff99;
     color: black;
     font-weight: 600;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s;
     margin-top: 20px;
@@ -113,4 +117,35 @@ button {
 button:hover {
     background-color: #007bff;
     color: white;
+}
+
+/* 🔹 Responsive */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
 }

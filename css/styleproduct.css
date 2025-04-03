@@ -3,18 +3,14 @@
 
 /* Estilos generales */
 body {
-    padding-top: 80px; /* Espacio para evitar que el menú fijo tape el contenido */
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/otra1.jpg"); /* Imagen de fondo */
+    background-image: url("../img/otra1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin: 6%;
+    margin: 0;
     padding: 0;
-    color: white; /* Para que el texto sea legible sobre el fondo */
-    text-shadow: 2px 2px 4px rgba(0, 255, 153, 0.5);
-    letter-spacing: 0.5px;
-    font-weight: 400;
+    color: white;
     text-align: center;
 }
 
@@ -65,53 +61,29 @@ body {
 
 .navbar ul li a:hover {
     background: #00ff99;
-    color: rgb(0, 0, 0);
+    color: black;
 }
 
-/* 🔹 Bienvenida */
-.content h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #00ff99;
-    text-shadow: 3px 3px 8px rgba(0, 255, 153, 0.7);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px 30px;
-    border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0px 0px 15px rgba(0, 255, 153, 0.8);
-}
+/* 🔹 Contenido principal */
 
-/* 🔹 Contenedor de contenido */
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.content img {
-    width: 200px; /* Tamaño original restaurado */
-    height: auto;
-}
-
-/* 🔹 Secciones */
-section {
-    margin: 40px auto;
-    padding: 20px;
-    width: 80%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.8);
+    background: rgba(0, 0, 0, 0.445); /* Fondo oscuro con transparencia */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 10px rgba(0, 255, 153, 0.8),  /* Resplandor suave */
+        0 0 20px rgba(0, 255, 153, 0.6),  /* Primer halo de neón */
+        0 0 40px rgba(0, 255, 153, 0.4);  /* Segundo halo más amplio */
+    width: 85%;
+    max-width: 700px;
+    margin: 120px auto 30px; /* 🔹 Separa más del menú */
     text-align: center;
 }
 
-h1, h2 {
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-}
 
+
+
+/* Títulos */
 h1 {
     color: #00ff99;
     font-size: 32px;
@@ -119,8 +91,9 @@ h1 {
 }
 
 h2 {
-    color: #b2f3a5;
+    color: #8fe99b; /* Verde neón suave */
     font-size: 24px;
+    
 }
 
 /* 🔹 Productos */
@@ -171,30 +144,44 @@ button {
 }
 
 button:hover {
-    background-color: #ff00ff;
+    background-color: #007bff;
     color: white;
 }
 
-/* 🔹 Tabla */
-table {
+/* 🔹 Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 50px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
 }
 
-th, td {
-    padding: 12px;
-    border-bottom: 1px solid #00ff99;
+.modal-content {
+    background: rgb(20, 20, 20);
+    padding: 20px;
+    border-radius: 5px;
+    width: 350px;
     text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 255, 153, 0.8);
 }
 
-th {
-    background: #b2f3a5;
+.modal img {
+    width: 80%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
     color: white;
-    font-weight: 600;
-}
-
-td {
-    background: rgba(0, 0, 0, 0.6);
 }
 
