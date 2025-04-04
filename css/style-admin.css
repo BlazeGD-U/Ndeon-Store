@@ -1,10 +1,9 @@
-/* Importar tipografía moderna */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
 /* Estilos generales */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/otra5.jpg"); /* Fondo para admin */
+    background-image: url("../img/background.jpg"); /* Fondo para admin */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -13,7 +12,7 @@ body {
     color: white;
 }
 
-/* 🔹 Contenedor principal */
+/* Contenedor principal */
 .container {
     width: 80%;
     max-width: 900px;
@@ -31,9 +30,9 @@ h2, h3 {
     text-transform: uppercase;
 }
 
-/* 🔹 Botón de cerrar sesión */
+/*Botón de cerrar sesión */
 #logout {
-    background: #ff4444;
+    background: #FF6600;
     color: white;
     padding: 10px 15px;
     font-weight: bold;
@@ -44,10 +43,10 @@ h2, h3 {
 }
 
 #logout:hover {
-    background: #cc0000;
+    background: #990000;
 }
 
-/* 🔹 Tablas de productos y usuarios */
+/*Tablas de productos y usuarios */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -65,7 +64,7 @@ th {
     color: #00ff99;
 }
 
-/* 🔹 Formulario de añadir producto */
+/*Formulario de añadir producto */
 form {
     display: flex;
     flex-direction: column;
@@ -98,6 +97,6 @@ button {
 }
 
 button:hover {
-    background-color: #007bff;
+    background-color: #6600CC;
     color: white;
 }

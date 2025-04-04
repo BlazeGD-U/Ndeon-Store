@@ -1,10 +1,9 @@
-/* Importar tipografía */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
-/* 🔹 Estilos generales */
+/*Estilos generales*/
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/otra1.jpg");
+    background-image: url("../img/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -13,7 +12,7 @@ body {
     color: white;
 }
 
-/* 🔹 Menú de navegación */
+/*Menú de navegación*/
 .navbar {
     width: 100%;
     background: linear-gradient(90deg, #0d0d0d, #222);
@@ -30,7 +29,7 @@ body {
     height: 60px;
 }
 
-/* Lista de enlaces del menú */
+/*Lista de enlaces del menu*/
 .navbar ul {
     list-style: none;
     display: flex;
@@ -53,9 +52,9 @@ body {
 }
 
 
-/* 🔹 Contenedor principal */
+/*Contenedor principal*/
 .container {
-    margin-top: 120px; /* Aumentado para mayor separación */
+    margin-top: 120px;
     padding: 30px;
     background: rgba(0, 0, 0, 0.85);
     border-radius: 15px;
@@ -66,7 +65,7 @@ body {
     margin-right: auto;
 }
 
-/* 🔹 Títulos */
+/*Titulos*/
 h2 {
     color: #00ff99;
     font-size: 24px;
@@ -75,7 +74,7 @@ h2 {
     text-shadow: 0 0 10px #00ff99;
 }
 
-/* 🔹 Tabla */
+/*Tabla*/
 table {
     width: 100%;
     border-collapse: collapse;
@@ -100,7 +99,7 @@ th {
     text-transform: uppercase;
 }
 
-/* 🔹 Botón */
+/*Boton*/
 button {
     min-width: 140px;
     padding: 10px 15px;
@@ -115,11 +114,11 @@ button {
 }
 
 button:hover {
-    background-color: #007bff;
+    background-color: #6600CC;
     color: white;
 }
 
-/* 🔹 Responsive */
+/*Responsive */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;

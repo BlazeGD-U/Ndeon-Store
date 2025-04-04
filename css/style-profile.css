@@ -1,22 +1,21 @@
-/* Importar tipografía */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
-/* 🔹 Estilos generales */
+/* Estilos generales */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/otra1.jpg"); /* Fondo igual al resto del sitio */
+    background-image: url("../img/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    color: white; /* Texto claro para contraste */
+    color: white;
 }
 
-/* 🔹 Menú de navegación superior */
+/*Menú de navegación superior */
 .navbar {
     width: 100%;
-    height: 60px; /* Ajustar altura para igualar las demás */
+    height: 60px;
     background: linear-gradient(90deg, #0d0d0d, #222);
     color: white;
     padding: 10px 20px;
@@ -66,30 +65,30 @@ body {
     color: black;
 }
 
-/* 🔹 Contenedor del perfil */
+/*Contenedor del perfil */
 .container {
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 
-        0 0 10px rgba(0, 255, 153, 0.8),  
-        0 0 20px rgba(0, 255, 153, 0.6),  
-        0 0 40px rgba(0, 255, 153, 0.4);  
+    box-shadow:
+        0 0 10px rgba(0, 255, 153, 0.8),
+        0 0 20px rgba(0, 255, 153, 0.6),
+        0 0 40px rgba(0, 255, 153, 0.4);
     width: 60%;
     max-width: 600px;
-    margin: 120px auto 30px; /* Separación del menú */
+    margin: 120px auto 30px;
     text-align: center;
 }
 
-/* 🔹 Estilo de los títulos */
+/*Estilo de los títulos */
 h2 {
-    color: #8fe99b; /* Verde neón */
+    color: #8fe99b;
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-/* 🔹 Estilo de los inputs */
+/*Estilo de los inputs */
 input {
     width: 80%;
     padding: 12px;
@@ -109,7 +108,7 @@ input:focus {
     outline: none;
 }
 
-/* 🔹 Estilo de los botones */
+/* Estilo de los botones */
 button {
     width: 80%;
     padding: 12px;
@@ -124,6 +123,6 @@ button {
 }
 
 button:hover {
-    background-color: #007bff;
+    background-color: #6600CC;
     color: white;
 }

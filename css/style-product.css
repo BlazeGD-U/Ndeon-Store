@@ -1,10 +1,9 @@
-/* Importar tipografía moderna */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
 /* Estilos generales */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/otra1.jpg");
+    background-image: url("../img/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -14,7 +13,7 @@ body {
     text-align: center;
 }
 
-/* 🔹 Menú de navegación superior */
+/*Menú de navegación superior */
 .navbar {
     width: 100%;
     background: linear-gradient(90deg, #0d0d0d, #222);
@@ -64,19 +63,19 @@ body {
     color: black;
 }
 
-/* 🔹 Contenido principal */
+/*Contenido principal */
 
 .content {
-    background: rgba(0, 0, 0, 0.445); /* Fondo oscuro con transparencia */
+    background: rgba(0, 0, 0, 0.445);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 
-        0 0 10px rgba(0, 255, 153, 0.8),  /* Resplandor suave */
-        0 0 20px rgba(0, 255, 153, 0.6),  /* Primer halo de neón */
-        0 0 40px rgba(0, 255, 153, 0.4);  /* Segundo halo más amplio */
+    box-shadow:
+        0 0 10px rgba(0, 255, 153, 0.8),
+        0 0 20px rgba(0, 255, 153, 0.6),
+        0 0 40px rgba(0, 255, 153, 0.4);
     width: 85%;
     max-width: 700px;
-    margin: 120px auto 30px; /* 🔹 Separa más del menú */
+    margin: 120px auto 30px; 
     text-align: center;
 }
 
@@ -91,12 +90,12 @@ h1 {
 }
 
 h2 {
-    color: #8fe99b; /* Verde neón suave */
+    color: #8fe99b; 
     font-size: 24px;
-    
+
 }
 
-/* 🔹 Productos */
+/*Productos */
 .productos-container {
     display: flex;
     gap: 20px;
@@ -130,7 +129,7 @@ h2 {
     box-shadow: 4px 4px 15px rgba(0, 255, 153, 0.8);
 }
 
-/* 🔹 Botones */
+/* Botones */
 button {
     width: 100%;
     padding: 10px;
@@ -144,11 +143,11 @@ button {
 }
 
 button:hover {
-    background-color: #007bff;
+    background-color: #6600CC;
     color: white;
 }
 
-/* 🔹 Modal */
+/* Modal */
 .modal {
     display: none;
     position: fixed;

@@ -1,10 +1,10 @@
 /* Estilos generales del cuerpo */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/otra5.jpg"); /* Imagen de fondo similar al index */
+    background-image: url("../img/otra5.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efecto de fondo fijo */
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,10 +16,10 @@ body {
 
 /* Contenedor del formulario */
 .container {
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia para destacar el formulario */
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra para dar profundidad */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     width: 350px;
     text-align: center;
 }
@@ -31,7 +31,7 @@ body {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #00ff99; /* Verde neón para resaltar */
+    color: #00ff99;
 }
 
 /* Estilo de los campos de entrada */
@@ -69,7 +69,7 @@ button {
 
 /* Efecto hover en el botón */
 button:hover {
-    background-color: #1b84f3;
+    background-color: #6600CC;
     color: white;
 }
 
@@ -80,7 +80,7 @@ p a {
 }
 
 p a:hover {
-    color: #17552f;
+    color: #007bff;
 }
 
 /* Estilo del mensaje de error */
@@ -88,7 +88,7 @@ p a:hover {
     color: red;
     margin-top: 10px;
     font-size: 14px;
-    display: none; /* Inicialmente oculto */
+    display: none;
 }
 
 /* Adaptabilidad para pantallas pequeñas */
@@ -109,7 +109,7 @@ p a:hover {
 
 .content, .container {
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
-    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.8); /* Resplandor verde */
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.8);
     padding: auto;
 }

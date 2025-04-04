@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderProducts() {
         productTable.innerHTML = ""; // Limpiar la tabla antes de volver a llenarla.
-    
+
         let products = JSON.parse(localStorage.getItem("products")) || [];
-    
+
         products.forEach((product, index) => {
             const row = document.createElement("tr");
             row.innerHTML = `
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             productTable.appendChild(row);
         });
-    
+
         // ✅ SOLUCIÓN: Agregar eventos a los botones después de renderizar
         document.querySelectorAll(".delete-btn").forEach(button => {
             button.addEventListener("click", function () {
@@ -36,20 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-    
+
     function deleteProduct(index) {
         let products = JSON.parse(localStorage.getItem("products")) || [];
-    
+
         products.splice(index, 1); // Eliminar producto
         localStorage.setItem("products", JSON.stringify(products));
-    
+
         renderProducts();
         window.dispatchEvent(new Event("storage")); // Sincronizar cambios con otras páginas
     }
-    
+
     // Llamar a renderProducts al cargar
     document.addEventListener("DOMContentLoaded", renderProducts);
-    
 
     function renderUsers() {
         userTable.innerHTML = "";
@@ -78,40 +77,40 @@ document.addEventListener("DOMContentLoaded", () => {
         const precio = document.getElementById("productPrice").value;
         const categoria = document.getElementById("productCategory").value;
         const imagen = document.getElementById("productImage").value;
-    
+
         if (!nombre || !descripcion || !precio || !categoria || !imagen) {
             alert("Por favor, complete todos los campos.");
             return;
         }
-    
+
         let products = JSON.parse(localStorage.getItem("products")) || [];
-        
+
         // Verificar si el nombre o la URL ya existen
         const nombreExiste = products.some(product => product.nombre.toLowerCase() === nombre.toLowerCase());
         const urlExiste = products.some(product => product.imagen === imagen);
-        
+
         if (nombreExiste) {
             alert("Ya existe un producto con ese nombre.");
             return;
         }
-        
+
         if (urlExiste) {
             alert("Ya existe un producto con esa URL de imagen.");
             return;
         }
-    
+
         products.push({ nombre, descripcion, precio, categoria, imagen });
-    
+
         localStorage.setItem("products", JSON.stringify(products));
-    
+
         renderProducts();
         window.dispatchEvent(new Event("storage")); // Notificar cambios a otras páginas
-    
+
         alert("Producto agregado correctamente.");
-        
+
         // Limpiar el formulario
         document.getElementById("addProductForm").reset();
-    } 
+    }
 
     addProductForm.addEventListener("submit", (e) => {
         e.preventDefault();
